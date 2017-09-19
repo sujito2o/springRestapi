@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit_main.iml" group="sujit" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit_test.iml" group="sujit" />
+    </modules>
+  </component>
+</project>
