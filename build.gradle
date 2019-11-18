@@ -13,15 +13,54 @@ repositories {
 task deploy (dependsOn: war){
     copy {
         from "build/libs"
-        into "/home/sujit/Downloads/apache-tomcat-8.0.46/webapps"
+        into "/Users/sujit/apache-tomcat-8.5.47/webapps"
         include "*.war"
     }
+}
+//1. exclude commons-logging
+configurations.all {
+    exclude group: "commons-logging", module: "commons-logging"
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    providedCompile 'javax.servlet:servlet-api:2.5'
-    compile group: 'org.springframework', name: 'spring-context', version:'4.3.8.RELEASE'
-    compile group: 'org.springframework', name: 'spring-web', version:'4.3.8.RELEASE'
-    compile group: 'org.springframework', name: 'spring-webmvc', version:'4.3.8.RELEASE'
+
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+
+    compile group: 'org.springframework', name: 'spring-context', version:'5.2.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version:'5.2.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.2.1.RELEASE'
+
+
+    //kafka
+    compile group: 'org.apache.kafka', name: 'kafka-streams', version: '0.10.0.0'
+    compile group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.3.1.RELEASE'
+
+    compile group: 'org.springframework', name: 'spring-websocket', version: '5.2.1.RELEASE'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.0'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.10.0'
+
+    //2. bridge logging from JCL to SLF4j
+    compile 'org.slf4j:jcl-over-slf4j:1.7.12'
+
+    //3. Logback
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+
+
+
+
+
+
+
+
+
+
+
 }

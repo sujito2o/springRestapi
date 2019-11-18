@@ -7,10 +7,8 @@ import org.springframework.stereotype.Service;
 public class HelloServiceImpl implements HelloService {
 
 
-
-
     @Override
     public String getHello() {
-        return "sujit yadav";
+        return "sujit yadav ";
     }
 }
