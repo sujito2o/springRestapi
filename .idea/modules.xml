@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit.iml" group="sujit" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit_main.iml" group="sujit" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit_test.iml" group="sujit" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sujit.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sujit.test.iml" />
     </modules>
   </component>
 </project>

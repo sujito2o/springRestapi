@@ -13,7 +13,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/live-temperature").setAllowedOrigins("http://localhost:9000").withSockJS();
+        registry.addEndpoint("/live-temperature").setAllowedOrigins("*").withSockJS();
     }
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {

@@ -13,21 +13,9 @@ public class KafkaConsumerService{
     SimpMessagingTemplate template;
     @KafkaListener(topics="livetemperature")
     public void consume(@Payload String message) {
-        if(isNumeric(message)) {
-            template.convertAndSend("/topic/temperature", message);
-        }
+
+            template.convertAndSendToUser("12345","/topic/temperature", message);
+
     }
-    public  boolean isNumeric(String str)
-    {
-        try
-        {
-            @SuppressWarnings("unused")
-            double d = Double.parseDouble(str);
-        }
-        catch(NumberFormatException nfe)
-        {
-            return false;
-        }
-        return true;
-    }
+
 }
